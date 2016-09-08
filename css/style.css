@@ -1,91 +1,66 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-.wrapper{
+body {
+  background-color: #efefef;
+}
+
+.wrapper {
   width: 80%;
   margin: 20px auto;
+  padding: 40px;
+  background-color: white;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-wrap{
-  width: 600px;
-  position: relative;
-  padding: 5px;
-  margin: 0 auto;
-  border: 1px solid #2e2e2e;
-  border-radius: 3px;
-}
-
-.carousel-hider{
-  overflow: hidden;
-}
-
-.carousel-list{
-  position: relative;
-  list-style: none;
-  width: 10000px;
-}
-
-.carousel-elem{
-  float: left;
-  margin-right: 25px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.carousel-elem img{
-  max-width: 100px;
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 40px;
-  width: 30px;
-  height: 30px;
-  background: #4E443C;
-  color: #fff;
-  text-align: center;
+button {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  font-weight: 700;
+  color: white;
   text-decoration: none;
-  text-shadow: 0 0 1px #000;
-  font: 24px/27px Arial, sans-serif;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -webkit-box-shadow: 0 0 2px #999;
-  -moz-box-shadow: 0 0 2px #999;
-  box-shadow: 0 0 2px #999;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(57, 114, 199);
+  box-shadow: 0 -3px rgb(55, 66, 167) inset;
+  transition: 0.2s;
 }
 
-.prev:hover,
-.next:hover{
-  background-color: #BDBDBD;
+button:hover {
+  background: rgb(48, 55, 167);
 }
 
-.prev {
-  left: -35px
+button:active {
+  background: rgb(56, 71, 147);
+  box-shadow: 0 3px rgb(63, 71, 147) inset;
 }
 
-.next {
-  right: -35px
+h1 {
+  text-align: center;
 }
 
-.fancyWindow{
-  position: absolute;
-  max-height: 600px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index:110;
+.foto {
+  display: block;
+  margin: 30px auto;
+  width: 30%;
 }
 
-.overlay{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .5);
-  z-index:100;
+.section p {
+  margin: 10px 0;
+}
+
+.section {
+  border-bottom: 2px solid grey;
+}
+
+.last-section, .section {
+  padding: 20px 25px;
+}
+
+.phone {
+  margin-bottom: 30px;
 }

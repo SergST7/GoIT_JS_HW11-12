@@ -18,7 +18,6 @@
         || (this.is(':not(ul)'))
         || (this.is(':not(.carousel-list)'))) return;
 
-
     this.wrap('<div class="carousel-wrap"></div>')
         .wrap('<div class="carousel-hider"></div>');
 
@@ -54,7 +53,6 @@
         $fancyWindow.remove();
         $overlay.remove();
       })
-
     });
 
     return this

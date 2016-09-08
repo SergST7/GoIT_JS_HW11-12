@@ -1,0 +1,81 @@
+.carousel-wrap{
+  width: 600px;
+  position: relative;
+  padding: 5px;
+  margin: 0 auto;
+  border: 1px solid #2e2e2e;
+  border-radius: 3px;
+}
+
+.carousel-hider{
+  overflow: hidden;
+}
+
+.carousel-list{
+  position: relative;
+  list-style: none;
+  width: 10000px;
+}
+
+.carousel-elem{
+  float: left;
+  margin-right: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.carousel-elem img{
+  max-width: 100px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 40px;
+  width: 30px;
+  height: 30px;
+  background: #4E443C;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 1px #000;
+  font: 24px/27px Arial, sans-serif;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 2px #999;
+  -moz-box-shadow: 0 0 2px #999;
+  box-shadow: 0 0 2px #999;
+}
+
+.prev:hover,
+.next:hover{
+  background-color: #BDBDBD;
+}
+
+.prev {
+  left: -35px
+}
+
+.next {
+  right: -35px
+}
+
+.fancyWindow{
+  position: absolute;
+  max-height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:110;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index:100;
+}

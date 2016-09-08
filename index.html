@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Homework 11 - 12</title>
+  <link rel="stylesheet" href="css/myPlugin.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/lodash.js"></script>
   <script src="js/jquery-3.1.0.js"></script>
   <script src="js/myPlugin.js"></script>
   <script src="js/main.js"></script>
@@ -54,13 +56,34 @@
       <p>Картинка 14</p>
     </li>
   </ul>
+  <button> About Me</button>
 </div>
 
-
-<script type="text/template">
-  <ul></ul>
-
+<!--шаблон для страницы ОБ АВТОРЕ-->
+<script type="text/template" id="authorInfo">
+  <div class="section">
+    <h1><%=name%></h1>
+    <img src=<%-fotoSrc%> alt="My foto" class="foto">
+    <p><%=job%></p>
+  </div>
+  <div class="section">
+    <p><%=goal%></p>
+    <ul>
+      <% reasons.forEach(function(item) { %>
+      <li><%-item%></li>
+      <% }); %>
+    </ul>
+  </div>
+  <div class="section">
+    <p><%=phoneTitle%> </p>
+    <p class="phone"><%=phone%></p>
+    <p><%=webTitle%></p>
+    <a href="<%=vkLink%>">Клик</a>
+  </div>
+  <div class="last-section">
+    <p><%=feedTitle%></p>
+    <p><%=feed%></p>
+  </div>
 </script>
-
 </body>
 </html>
