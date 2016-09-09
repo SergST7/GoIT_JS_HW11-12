@@ -25,7 +25,7 @@
     $('.carousel-wrap').append('<a class="prev" href="#">‹</a>' +
         '<a class="next" href="#">›</a>');
 
-    //обработчики событий управления
+    //обработчики событий на кнопки управления
     $('.prev').click(function () {
       if(currentLeftVal != 0) {
         currentLeftVal += pixelsOffset;
@@ -39,7 +39,7 @@
         self.animate({ left : currentLeftVal + "px"}, 700);
       }
     });
-
+  //fancybox
     imagesCollection.click(function () {
       var imageSrc = $(this).find('img').attr('src');
       var $overlay = $('<div class="overlay">');
