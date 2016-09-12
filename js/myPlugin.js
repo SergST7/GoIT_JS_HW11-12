@@ -27,17 +27,21 @@
 
     //обработчики событий на кнопки управления
     $('.prev').click(function () {
-      if(currentLeftVal != 0) {
-        currentLeftVal += pixelsOffset;
-        self.animate({left : currentLeftVal + "px"}, 700);
+      //зацикливаем слайдер
+      if(currentLeftVal == 0) {
+        currentLeftVal = minimumOffset - pixelsOffset;
       }
+      currentLeftVal += pixelsOffset;
+      self.animate({left : currentLeftVal + "px"}, 700);
     });
 
     $('.next').click(function () {
-      if(currentLeftVal != minimumOffset) {
-        currentLeftVal -= pixelsOffset;
-        self.animate({ left : currentLeftVal + "px"}, 700);
+      //зацикливаем слайдер
+      if(currentLeftVal == minimumOffset) {
+        currentLeftVal = pixelsOffset;
       }
+      currentLeftVal -= pixelsOffset;
+      self.animate({ left : currentLeftVal + "px"}, 700);
     });
   //fancybox
     imagesCollection.click(function () {

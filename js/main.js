@@ -23,14 +23,19 @@ $(function () {
     vkLink: "http://vk.com/id174074548",
     feedTitle:'Мой фидбек:',
     feed:'Если нужно могу построить вам забор'
-    
   };
 
-  var tmpl = _.template($('#authorInfo').html());
+  var tmplLodush = _.template($('#authorInfo').html());
 
   $('button').click(function () {
+    var result;
     $(this).hide();
-    var result = tmpl(data);
+    if(confirm('Отрендерить страницу с помощью шаблонизатора Джона Резига?')){
+      result = tmpl("authorInfo", data);
+    } else {
+      result = tmplLodush(data);
+    }
+
     $('.wrapper').append( result );
   });
   

@@ -8,6 +8,7 @@
   <script src="js/lodash.js"></script>
   <script src="js/jquery-3.1.0.js"></script>
   <script src="js/myPlugin.js"></script>
+  <script src="js/RezigTmpl.js"></script>
   <script src="js/main.js"></script>
 </head>
 <body>
@@ -55,6 +56,12 @@
     <li class="carousel-elem"><img src="img/image7.jpg" alt="">
       <p>Картинка 14</p>
     </li>
+    <li class="carousel-elem"><img src="img/image7.jpg" alt="">
+      <p>Картинка 14</p>
+    </li>
+    <li class="carousel-elem"><img src="img/image7.jpg" alt="">
+      <p>Картинка 14</p>
+    </li>
   </ul>
   <button> About Me</button>
 </div>
@@ -63,14 +70,14 @@
 <script type="text/template" id="authorInfo">
   <div class="section">
     <h1><%=name%></h1>
-    <img src=<%-fotoSrc%> alt="My foto" class="foto">
+    <img src=<%=fotoSrc%> alt="My foto" class="foto">
     <p><%=job%></p>
   </div>
   <div class="section">
     <p><%=goal%></p>
     <ul>
       <% reasons.forEach(function(item) { %>
-      <li><%-item%></li>
+      <li><%=item%></li>
       <% }); %>
     </ul>
   </div>
@@ -85,5 +92,6 @@
     <p><%=feed%></p>
   </div>
 </script>
+
 </body>
 </html>
