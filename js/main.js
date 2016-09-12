@@ -25,15 +25,17 @@ $(function () {
     feed:'Если нужно могу построить вам забор'
   };
 
-  var tmplLodush = _.template($('#authorInfo').html());
+  var tmplLoDash = _.template($('#authorInfo').html());
 
   $('button').click(function () {
     var result;
     $(this).hide();
-    if(confirm('Отрендерить страницу с помощью шаблонизатора Джона Резига?')){
+    if(confirm('Отрендерить страницу с помощью шаблонизатора Джона Резига?' +
+            ' В случае отказа будет использован шаблонизатор библиотеки' +
+            ' LoDash')){
       result = tmpl("authorInfo", data);
     } else {
-      result = tmplLodush(data);
+      result = tmplLoDash(data);
     }
 
     $('.wrapper').append( result );
